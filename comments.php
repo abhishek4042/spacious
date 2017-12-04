@@ -25,10 +25,10 @@ if ( post_password_required() )
 
 	<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) : ?>   // Comments Section Starts here
 		<h3 class="comments-title">
 			<?php
-				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'spacious' ),
+				printf( _n( '1 thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'spacious' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h3>
@@ -67,6 +67,6 @@ if ( post_password_required() )
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'spacious' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php comment_form(); ?> //Comments Submission Form
 
 </div><!-- #comments -->
